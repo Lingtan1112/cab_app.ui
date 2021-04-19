@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+.table h1{
+    text-align:center;
+    margin-bottom: 20px;
+	background-color:yellow;
+	color:black;
+}
+.table table{
+	margin:0 auto;
+	height:200px;
+	width:300px;
+	text-align:center;
+}
+
+.button button{
+    margin:0 auto;
+    background-color:lightskyblue;
+    margin: auto;   
+    height: 30px;
+    width: 70px;
+}
+.button button:hover{
+    background-color: black;
+    color:white;
+}
