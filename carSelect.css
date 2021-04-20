@@ -1,34 +1,50 @@
-@charset "ISO-8859-1";
-*{
-	margin: 0;
-	padding: 0;
+function bill(){
+    event.preventDefault();
+    let km = document.getElementById("kilometers").value;
+    let selected = document.querySelector('#cars').value;
+    let calc= document.querySelector('#calculate').value;
+    let nextpage = document.querySelector('#nextpage').value;
+    //alert(km+selected+calc+nextpage);
+    
+    let type="";   
+    let amt=0;
+    let result=0;
+    if(calc=="calculator"){
+        switch(selected){
+    
+        case "mini":
+        type="Mini";
+        amt=10; 
+        result=km*amt;   
+        myGeeks(type,result);
+        break;
+
+        case "macro":
+        type="Macro";
+        amt=15; 
+        result=km*amt;   
+        myGeeks(type,result);
+        break;
+
+        case "prime":
+        type="Prime";
+        amt=20; 
+        result=km*amt;   
+        myGeeks(type,result);
+        break;
+    
+    }  
 }
-.carselect h1{
-	text-align:center;	
-	color:green;
-	
+    else if(nextpage=="next"){
+        alert("please close")
+        window.location.href="journeyDetails.html";
+        
+    }
+    
 }
-body{
-	border: 5px solid green;
-	margin:10%;	
-}
-.options{
-	
-	margin:5% 20% 0% 19%; 
-	padding-left: 20%
-}
-.km{
-	
-	margin:5% 20% 0% 20%;
-	text-align:center;
-}
-.bill{
-	
-	margin:5% 20% 0% 20%;
-	text-align:center;
-}
-.button {
-	
-	margin:2% 20% 5% 20%;
-	text-align:center;
+
+
+function myGeeks(type,results) {
+    document.getElementById('bill').innerHTML
+        = 'The price for travelling in '+ type +" is "+results;
 }
