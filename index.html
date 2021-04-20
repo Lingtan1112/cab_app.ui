@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="mainLogin.js"></script>
 <link rel ="stylesheet" href="mainLogin.css">
 <meta charset="ISO-8859-1">
 <title>OLA Cab-App</title>
 </head>
 <body>
 <div class ="login">
-	<form action = "afterLogin.html" method="get">
+	<form action="afterLogin.html" name="form1"  onsubmit="return validate()" method="get" >
 	<h1>Login Page</h1><br/>
 	<center>
 	<label for ="name"></label>
-	<input type="text" name="name" placeholder="Enter the mobile number" id="name"><br/><br>
+	<input type="text" name="name" placeholder="Enter the mobile number" id="userName"><br/><br>
+	
 	<label for ="password"></label>
 	<input type="password" name="password" placeholder="Enter the password" id="password" ><br/><br>
-	<button>submit</button><br/>
+	<div class="wrong">
+			<label for="wrong" id="invalid">invalid Credentials</label></br>
+	</div></br>
+	
+	<button><strong>Login</strong></button><br/>
 	</center>
 	</form>
 </div>
