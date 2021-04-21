@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="journeyDetails.css">
+    <link rel="stylesheet" href="">
+    <script src="journeyDetail.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Journey Date</title>
 </head>
 <body>
-<div class="frame"></div>
-<form action="peaktime.html">
-<div class="dateTime">
-    <div class="align1">
-        <div class="align2">
-    <h1>Journey Details</h1>
-    <label>Journey details</label></br>
-    <input type="date" name="journeyDate" min="2021-04-19" max="2021-05-30"/></br></br>
-    <label>Journey Time</label></br>
-    <div class="timediv"><input type="time" name="journeyTime" min="09:00:00" max:"06:00:00"></br>
-</div>
-</div>
-</div></div>
-</div></br>
-<div class="radio">
-    <h3><label for="gender">Gender</label></h3></br>
-    <input type="radio" name="male" id="male">
-    <label for="male">Male</label></br>
-    <input type="radio" name="female" id="female">
-    <label for="female">Female</label></br>
-    <button>Submit</button>
-    
 
-</div>
-</div>
+<form = action="" onsubmit="date()" method="GET">
+<center>
+<h1>Journey Details</h1>
+<label><h3>Journey details</h3></label>          
+<input type="date" name="journeyDate"  id="jdate" >
+<button>check date</button><br>
+<label type="text" id="invalidDate"></h1></label><br>
+
+
+</center>
 </form>
+
+<form action="" onsubmit="return time()">
+    <center>
+    <label><h3>Journey Time</h3></label>
+        <input type="time" name="journeyTime" id="jtime">
+        <button>check Time</button><br>
+        <center>
+        <label type="text" id="invalidTime"></label><br>
+        
+        </center>
+    </center>
+</form>
+<form action="" ></form>
+    <center>
+    <h3><label for="gender">Gender</label></h3>
+    <input type="radio" name="gender" id="male">Male&nbsp;
+    <input type="radio" name="gender" id="female">Female
+    <button>Submit</button>
+    </center>
+</form>
+<form action="" onsubmit="age()">
+    <center>
+        <label for="seniorcheck" id ="senior"><h3>Enter your DOB for Seniority Discount</h3></label>
+        <input type="date" id="checksenior">&nbsp;
+        <button>Check</button><br>
+        <label for="invaliddate" id="noDate"></label>
+    </center>
+</form>
+
 </body>
 </html>
