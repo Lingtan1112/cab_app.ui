@@ -14,20 +14,22 @@
 	<div class="options">
 	<label for="cars">Select the car of your choice</label>
 	<select name="car" id="cars">
-	<option value="mini" >Mini</option>
-	<option value="macro" >Macro</option>
-	<option value="prime" >Prime</option>
+		<option value="mini" >Mini</option>
+		<option value="macro" >Macro</option>
+		<option value="prime" >Prime</option>
 	</select></br></br>
 </div>
 <form action="journeyDetails.html" onsubmit="return bill()" >
 <div class="km">
 	<label for="kilometers" >Enter the distance in Km</label></br>
-	<input type="number" name="km" id="kilometers"><br/>
+	<input type="number" name="km" id="kilometers"><br/><br>
+	<input  type="text" name="gst : 7%" value=" GST : 7%" readonly>
 
 </div>
 <div class="bill">
-	<label for="bill" ></label>
-	<label for="bill" id="bill"></label>
+	
+	<label for="bill" id="bill"></label><br><br>
+	<label for="gst" id="gst"></label>
 	
 </div>
 <div class="button">
