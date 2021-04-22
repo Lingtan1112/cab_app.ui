@@ -13,6 +13,7 @@
 <form = action="" onsubmit="date()" method="GET">
 <center>
 <h1>Journey Details</h1>
+<label>Enter Your Name:</label><input type="text" id="name" required>
 <label><h3>Journey details</h3></label>          
 <input type="date" name="journeyDate"  id="jdate" required >
 <button>check date</button><br>
@@ -37,8 +38,8 @@
 <form action="" onsubmit="genderCheck()">
     <center>
     <h3><label for="gender">Gender</label></h3>
-    <input type="radio" name="gender" id="male" required>Male&nbsp;
-    <input type="radio" name="gender" id="female" required>Female
+    <input type="radio" value ="Male" name="gender" id="male" required>Male&nbsp;
+    <input type="radio" value="Female" name="gender" id="female" required>Female
     <button>Submit</button>
     </center>
 </form>
@@ -52,7 +53,7 @@
     </center>
 </form>
 
-<form action="summary.html">
+<form action="" onsubmit="fillCheck()">
     <center>
         <button>Next Page</button>
     </center>

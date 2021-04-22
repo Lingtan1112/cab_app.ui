@@ -73,3 +73,19 @@ function gstdisplay(type,gstprice){
     document.getElementById('gst').innerHTML
         = 'The Total fare inclusive of GST for '+ type +" car is Rs."+gstprice;
 }
+
+function exit(){
+    event.preventDefault();
+    
+    let km = document.getElementById('kilometers').value;
+    
+    let kmlen= parseInt(km.length);
+    
+    if(kmlen>0){
+        window.location.href="journeyDetails.html";
+    }
+    else{
+        alert("Please Enter all the field");
+    }
+
+}
