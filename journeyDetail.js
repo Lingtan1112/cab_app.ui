@@ -82,6 +82,7 @@ function age(){
 function seniorCalc(){
     let gstvalue = localStorage.getItem('gstprice');
     let seniorprice = gstvalue/2;
+    localStorage.setItem('finalprice',seniorprice);
     return seniorprice;
 }
 function peakprice(){
