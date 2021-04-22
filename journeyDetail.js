@@ -34,14 +34,17 @@ function time(){
     var jtime = document.getElementById("jtime").value;
     var onlyHour = jtime.substr(0,2);
     if(onlyHour >=17 && onlyHour<=19){
-        document.getElementById("invalidTime").innerHTML="Since it is peak Hour the price increases by 1.25% per km"; 
-        return true;
+        document.getElementById("invalidTime").innerHTML="Since it is peak Hour the price increases by 1.25% per km";
+        let peakvalue = peakprice();
+        document.getElementById("peakprice").innerHTML="Price due to Peak Time is "+peakvalue;
+        
     }
     else if(onlyHour>=0 && onlyHour<=24){
         document.getElementById("invalidTime").innerHTML="Valid Time"; 
     }
 }
 function age(){
+    let gstvalue = localStorage.getItem('gstprice');
     event.preventDefault();
     let ageToCheck = document.getElementById("checksenior").value; 
     let ageYear = ageToCheck.substr(0,4);
@@ -54,13 +57,46 @@ function age(){
     }
     else{
         if(age>=60){
-            document.getElementById("noDate").innerHTML="You are senior citizen to avail 50% discount";
+            document.getElementById("noDate").innerHTML="You are a senior citizen to avail 50% discount";
+            let seniorPrice = seniorCalc();
+            document.getElementById("result").innerHTML="Total fair price";
+            document.getElementById("result").innerHTML="Rs."+seniorPrice;
+
         }
         else{
-            document.getElementById("noDate").innerHTML="You are Not valid ";
+            document.getElementById("noDate").innerHTML="You are Not eligible for discount";
+            document.getElementById("result").innerHTML="Rs."+gstvalue;
         }
 
     }
 } 
     
+function seniorCalc(){
+    let gstvalue = localStorage.getItem('gstprice');
+    let seniorprice = gstvalue/2;
+    return seniorprice;
+}
+function peakprice(){
+    let gstvalue = localStorage.getItem('gstprice');
+    let km = localStorage.getItem('km');
+    //alert(gstvalue);
+    //alert(km);
+    let peakPriceValue = parseInt(km)*0.0125+parseInt(gstvalue);
+    //alert(peakPriceValue);
+    return peakPriceValue;
 
+}
+function genderCheck(){
+    event.preventDefault();
+    let type1="Male";
+    if(document.getElementById('male').checked==true){
+    alert("Male is selected");
+    localStorage.setItem('maleGender',type1);
+    
+    }
+    else if(document.getElementById('female').checked==true){
+        type2="Female";
+        alert("female is selected");
+        localStorage.setItem('femaleGender',type2);
+        }
+}
