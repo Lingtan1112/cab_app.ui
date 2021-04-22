@@ -14,9 +14,9 @@
 <center>
 <h1>Journey Details</h1>
 <label><h3>Journey details</h3></label>          
-<input type="date" name="journeyDate"  id="jdate" >
+<input type="date" name="journeyDate"  id="jdate" required >
 <button>check date</button><br>
-<label type="text" id="invalidDate"></h1></label><br>
+<label type="text" id="invalidDate"></label><br>
 
 
 </center>
@@ -25,28 +25,36 @@
 <form action="" onsubmit="return time()">
     <center>
     <label><h3>Journey Time</h3></label>
-        <input type="time" name="journeyTime" id="jtime">
+        <input type="time" name="journeyTime" id="jtime" required>
         <button>check Time</button><br>
         <center>
         <label type="text" id="invalidTime"></label><br>
+        <label id="peakprice"></label>
         
         </center>
     </center>
 </form>
-<form action="" ></form>
+<form action="" onsubmit="genderCheck()">
     <center>
     <h3><label for="gender">Gender</label></h3>
-    <input type="radio" name="gender" id="male">Male&nbsp;
-    <input type="radio" name="gender" id="female">Female
+    <input type="radio" name="gender" id="male" required>Male&nbsp;
+    <input type="radio" name="gender" id="female" required>Female
     <button>Submit</button>
     </center>
 </form>
 <form action="" onsubmit="age()">
     <center>
         <label for="seniorcheck" id ="senior"><h3>Enter your DOB for Seniority Discount</h3></label>
-        <input type="date" id="checksenior">&nbsp;
-        <button>Check</button><br>
-        <label for="invaliddate" id="noDate"></label>
+        <input type="date" id="checksenior" required>&nbsp;
+        <button>Check</button><br><br>
+        <label for="invaliddate" id="noDate"></label><br><br>
+        <label id="result"></label><br><br>
+    </center>
+</form>
+
+<form action="summary.html">
+    <center>
+        <button>Next Page</button>
     </center>
 </form>
 
