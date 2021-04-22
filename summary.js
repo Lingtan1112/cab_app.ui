@@ -12,6 +12,9 @@ let Gender =localStorage.getItem('Gender');
 let peakPriceValue = localStorage.getItem('peakPrice');
 let onlyHour = localStorage.getItem('onlyHour');
 let gender = localStorage.getItem('Gender');
+let finalPrice = localStorage.getItem('finalprice');
+//alert(finalPrice);
+
 //alert(" Name " +name + " ageb "+age + " gstvalue " + gstprice +" kilometer "+ km +" Price with gst "+ priceWithoutGst +" Cartype " +carType + " Year "+currentYear+ " Year "+" date "+journeyDate+" FinalDate "+finaldate+" Gender "+Gender);
 //alert("hellooooo");
 document.getElementById('name').innerText=name;
@@ -30,20 +33,39 @@ if(onlyHour>=17 && onlyHour<=19){
     //alert("Yes");
     document.getElementById('peakhrdisplay').innerText="Yes it is Peak time";
     document.getElementById('peakprice').innerText="The New Fare Price is "+peakPriceValue;
+    if(age>60){
+        // alert("Yes");
+         document.getElementById('seniorOutput').innerText="Yes, Eligible ";
+         document.getElementById('finalPrice').innerText="Rs."+(peakPriceValue/2);
+     
+     }
+     else{
+         //alert("NO")
+         document.getElementById('seniorOutput').innerText="No, Not Eligible";
+         document.getElementById('finalPrice').innerText="Rs."+peakPriceValue;
+     
+     }
+     
 }
 else{
+    document.getElementById('peakprice').innerText="Nill";
     //alert("NO")
     document.getElementById('peakhrdisplay').innerText="No it is not a peak Time";
+    if(age>60){
+        // alert("Yes");
+         document.getElementById('seniorOutput').innerText="Yes, Eligible ";
+         document.getElementById('finalPrice').innerText="Rs."+(gstprice/2);
+     
+     }
+     else{
+         //alert("NO")
+         document.getElementById('seniorOutput').innerText="No, Not Eligible";
+         document.getElementById('finalPrice').innerText="Rs."+gstprice;
+     
+     }
 }
 
-if(age>60){
-   // alert("Yes");
-    document.getElementById('seniorOutput').innerText="Yes, Eligible ";
-}
-else{
-    //alert("NO")
-    document.getElementById('seniorOutput').innerText="No, Not Eligible";
-}
+
 
 
 
