@@ -4,7 +4,7 @@ function validate(){
   var pwd = document.getElementById("password").value;
   let wrong =document.getElementById("invalid");
   if((user==9600923846)&&(pwd=="Lingtan")){
-    alert("Successfully logged in");
+    //alert("Successfully logged in");
     window.location="afterLogin.html";
   }
   else{
