@@ -25,8 +25,10 @@ function bill(){
         case "macro":
         type="Macro";
         amt=15; 
-        result=km*amt;  
+        result=km*amt;
+        gstprice = gst(result);  
         gstprice = gst(result); 
+        
         pricedisplay(type,result);
         gstdisplay(type,gstprice);
         break;
@@ -34,12 +36,18 @@ function bill(){
         case "prime":
         type="Prime";
         amt=20; 
-        result=km*amt;   
+        result=km*amt;  
+        gstprice = gst(result); 
         pricedisplay(type,result,gstprice);
         gstdisplay(type,gstprice);        
         break;
     
     }  
+    localStorage.setItem('gstprice',gstprice);
+    localStorage.setItem('km',km);
+    localStorage.setItem('priceWithoutGst',result);
+    localStorage.setItem('carType',type);
+
 }
     else if(nextpage=="next"){
         alert("please close")
