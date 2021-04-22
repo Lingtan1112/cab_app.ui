@@ -29,6 +29,7 @@ document.getElementById('priceWithGst').innerText=gstprice+" Rs";
 if(onlyHour>=17 && onlyHour<=19){
     //alert("Yes");
     document.getElementById('peakhrdisplay').innerText="Yes it is Peak time";
+    document.getElementById('peakprice').innerText="The New Fare Price is "+peakPriceValue;
 }
 else{
     //alert("NO")
