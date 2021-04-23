@@ -17,7 +17,7 @@ function date(){
         if(tmonth<=jmonth ){
             
             if(tdate<=jdate1 ){
-                document.getElementById("invalidDate").innerHTML="Valid date";
+                document.getElementById("invalidDate").innerHTML="";
                 
             }else{
                 document.getElementById("invalidDate").innerHTML="Invalid Date";
@@ -45,7 +45,7 @@ function time(){
         
     }
     else if(onlyHour>=0 && onlyHour<=24){
-        document.getElementById("invalidTime").innerHTML="Valid Time"; 
+        document.getElementById("invalidTime").innerHTML=""; 
     }
     
     
