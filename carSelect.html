@@ -5,33 +5,40 @@
 <script src="carSelect.js"></script>
 
 <meta charset="ISO-8859-1">
-<title>Car selection</title>
+<title>Price Estimator</title>
 </head>
 <body>
 <div class="carselect">
-	
-	<h1>Car Selection</h1>
+<center>
+	<h1>Price Estimator</h1><br>
 	<div class="options">
-	<label for="cars">Select the car of your choice</label>
+		
+	<label for="cars">Select the car of your choice</label><br></br>
 	<select name="car" id="cars" required>
 		<option value="mini" >Mini</option>
 		<option value="macro" >Macro</option>
 		<option value="prime" >Prime</option>
 	</select></br></br>
+	
 </div>
+</center>
 <form action="journeyDetails.html" onsubmit="return bill()" >
+<center>
 <div class="km">
-	<label for="kilometers" >Enter the distance in Km</label></br>
-	<input type="number" name="km" id="kilometers" required><br/><br>
+	<label for="kilometers" >Distance</label></br><br>
+	<input type="number" name="km" id="kilometers" placeholder="Enter the distance in Km"required><br/><br>
 	<input  type="text" name="gst : 7%" value=" GST : 7%" readonly>
 
 </div>
+</center>
 <div class="bill">
-	
+	<center>	
 	<label for="bill" id="bill"></label><br><br>
-	<label for="gst" id="gst"></label>
-	
+	<label for="gst" id="gst"></label><br>
+
 </div>
+</center>
+<center>
 <div class="button">
 		<button value="calculator" id="calculate">calculate</button><br><br>
 </form>
@@ -39,7 +46,7 @@
 		<button value="next" id="nextpage">Next Page</button>
 </form>
 </div>
-
-	</div>
+</center>
+</div>
 </body>
 </html>

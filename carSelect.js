@@ -71,7 +71,7 @@ function pricedisplay(type,results) {
 function gstdisplay(type,gstprice){
     //alert("gst");
     document.getElementById('gst').innerHTML
-        = 'The Total fare inclusive of GST for '+ type +" car is Rs."+gstprice;
+        = 'The Total fare with GST '+ type +" car is Rs."+gstprice;
 }
 
 function exit(){

@@ -9,26 +9,121 @@
 	
 }
 body{
-	border: 5px solid green;
-	margin:10%;	
-}
-.options{
+	background: url("https://bit.ly/2QCiR8k");
+    background-size: cover;
+	border: 5px solid beige;
+	border-radius: 30px;
+	width: 50%;
+	padding-top: 30px;
+	height: auto;
+	margin:auto;
+	margin-top:2%;
+	padding-bottom:40px;
 	
-	margin:5% 20% 0% 19%; 
-	padding-left: 20%
 }
-.km{
+
+.km input{
+	border: none;
+	border-radius: 20px;
+	height: 20px;
+	width: 40%;
+	background-color: lightgreen;
+	text-align: center;
+	font-weight: bold;
 	
-	margin:5% 20% 0% 20%;
-	text-align:center;
 }
+.km label{
+	color:beige;
+	margin-top:50px;
+	margin-bottom:30px;
+	font-weight: bold;
+
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.options label{
+	color:lightgreen;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#cars{
+	border: none;
+	border-radius: 30px;
+	width:90px;
+	height: 30px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 50px;
+	color:black;
+	background-color: lightgreen;
+}
+.options option{
+	font-weight:bold;
+	border:none;
+	border:1px solid white;
+	background-color: black;
+	color:lightgreen;
+	width:90px;
+	height: 80px;
+	margin:10px;
+	border-radius: 30px;
+	
+}
+
+
+.carselect h1{
+	color:lightgreen;
+	border:2px solid beige;
+	
+	padding:10px;
+	margin:0% 20%;
+	border-radius: 20px;
+	background-color: black;
+}
+.carselect h1:hover{
+	color:black;
+	background-color: lightgreen;
+	border-color: black;
+	transition: 0.7s;
+}
+
 .bill{
 	
 	margin:5% 20% 0% 20%;
 	text-align:center;
 }
-.button {
-	
-	margin:2% 20% 5% 20%;
-	text-align:center;
+.button button {
+	border: none;
+    color:black;
+	background:lightblue;
+	height:30px;
+	width:120px;
+	margin:0 auto;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
 }
+.button button:hover{
+	background-color: beige;
+    box-shadow: 0 3px 9px rgba(14, 218, 14, 0.459);
+	transition: 0.5s;
+	color:black;
+}
+#bill {
+	color:white;
+	font-weight: bold;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	
+}
+#gst{
+	color:lightgreen;
+	font-weight: bold;
+	border:2px solid beige;
+	background-color:black;
+	border-radius: 30px;
+	padding:5px;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;	
+}
+#calculate{
+	margin-top:20px;
+}
+
