@@ -1,51 +1,33 @@
-function date(){
-    
+function toSetDate(){    
     event.preventDefault();
     let date = new Date();
-    let tdate = date.getDate();
-    let tmonth = date.getMonth()+1;
-    let tyear = date.getFullYear();
-    localStorage.setItem('currentYear', tyear);
-    let jdate = document.getElementById("jdate").value;
-    localStorage.setItem('journeyDate', jdate);    
-    localStorage.setItem("finaldate",jdate);
-    let jyear = jdate.substr(0,4);
-    let jmonth = jdate.substr(5,2);
-    let jdate1 = jdate.substr(8,2);
-    if(tyear<=jyear ){
-        
-        if(tmonth<=jmonth ){
-            
-            if(tdate<=jdate1 ){
-                document.getElementById("invalidDate").innerHTML="";
-                
-            }else{
-                document.getElementById("invalidDate").innerHTML="Invalid Date";
-                
-            }
-        }
-        else{
-            document.getElementById("invalidDate").innerHTML="Invalid Date";
-        }
-    }else{
-       document.getElementById("invalidDate").innerHTML="Invalid Date"; 
-    }   
+    let minDateSetUp = date.toJSON().substr(0,10);
+    let maxDob = (date.toJSON().substr(0,7)+"-"+(parseInt(minDateSetUp.substr(8,2))+7));
+    let setdate = document.getElementById('jdate');
+    setdate.setAttribute('min',minDateSetUp);
+    setdate.setAttribute('max',maxDob);
+    setdate.setAttribute('value',minDateSetUp);
+    let setDateForDob= document.getElementById('checksenior');
+    setDateForDob.setAttribute('max',minDateSetUp);
+
 }
+
 function time(){
-    let peakresult=""
+    let peakresult="";
     event.preventDefault();
     var jtime = document.getElementById("jtime").value;
     localStorage.setItem('journeyTime',jtime);
     var onlyHour = jtime.substr(0,2);
     localStorage.setItem('onlyHour',onlyHour);
     if(onlyHour >=17 && onlyHour<=19){
-        document.getElementById("invalidTime").innerHTML="Since it is peak Hour the price increases by 1.25% per km";
         let peakvalue = peakprice();
+        document.getElementById("invalidTime").innerHTML="Since it is peak Hour the price increases by 1.25% per km";
         document.getElementById("peakprice").innerHTML="Price due to Peak Time is "+peakvalue;
         
     }
     else if(onlyHour>=0 && onlyHour<=24){
         document.getElementById("invalidTime").innerHTML=""; 
+        document.getElementById("peakprice").innerHTML="Fair price"+localStorage.getItem(gstprice);
     }
     
     
@@ -114,20 +96,44 @@ function genderCheck(){
     localStorage.setItem('Gender',gender);
 }
 function fillCheck(){
+    
     let name = document.getElementById("name").value;
     localStorage.setItem('name',name);
     event.preventDefault();
+    exit();
+    //date();
+    time();
+    age();
+    seniorCalc();
+    peakprice();
+    genderCheck();
+    
+    
+    
+
+}
+function exit(){
+    //alert("hello");
+    event.preventDefault();
+    //window.location.href="summary.html";
+    let name = document.getElementById("name").value;
+    localStorage.setItem('name',name);
     let form1 = document.getElementById("jdate").value;
     let form2 = document.getElementById("jtime").value;
     let form3 = document.getElementById("checksenior").value;
     let form4 = document.getElementById("male").value;
     let form5 = document.getElementById("female").value;
-    if(form1.length>0 && form2.length>0 && form3.length>0 ){
-        window.location.href="summary.html";
+    
+    if( form2.length>0 && form3.length>0 ){
+        document.getElementById("nextpage").style.visibility="visible";
+        
 
     }
     else{
         alert("Please enter all the fields");
     }
-
+}
+function exitToNext(){
+    event.preventDefault();
+    window.location.href="summary.html";
 }

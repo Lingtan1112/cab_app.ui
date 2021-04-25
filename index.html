@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<script src="mainLogin.js"></script>
-<link rel ="stylesheet" href="mainLogin.css">
-<meta charset="ISO-8859-1">
-<title>OLA Cab-App</title>
+	<script src="mainLogin.js"></script>
+	<link rel="stylesheet" href="mainLogin.css">
+	<meta charset="ISO-8859-1">
+	<title>OLA Cab-App</title>
 </head>
+
 <body>
-<div class ="login">
-	<form action="afterLogin.html" name="form1"  onsubmit="return validate()" method="get" >
-	<h1>Login Page</h1><br/>
-	<center>
-	<label for ="name"></label>
-	<input title="Mobile Number" type="text" name="name" placeholder="Mobile:9600923846" id="userName"><br/><br>
-	
-	<label for ="password"></label>
-	<input title="Password" type="password" name="password" placeholder="Password:Lingtan" id="password" ><br/><br>
-	<div class="wrong">
-			<label for="wrong" id="invalid">invalid Credentials</label></br>
-	</div></br>
-	
-	<button><strong>LOGIN</strong></button><br/>
-	</center>
-	</form>
-</div>
+	<div class="login">
+		<form action="afterLogin.html" name="form1" onsubmit="return validate()" method="get">
+			<h1>Login Page</h1>
+			<br/>
+			<center>
+				<label for="name"></label>
+				<input title="Mobile Number" type="text" name="name" placeholder="Mobile:9600923846" id="userName">
+				<br/>
+				<br>
+
+				<label for="password"></label>
+				<input title="Password" type="password" name="password" placeholder="Password:Lingtan" id="password">
+				<br/>
+				<br>
+				<div class="wrong">
+					<label for="wrong" id="invalid">invalid Credentials</label>
+					</br>
+				</div>
+				</br>
+
+				<button>
+					<strong>LOGIN</strong>
+				</button>
+				<br/>
+			</center>
+		</form>
+	</div>
 </body>
+
 </html>
