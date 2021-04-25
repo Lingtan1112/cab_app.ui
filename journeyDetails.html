@@ -3,13 +3,13 @@
 <head>
     <link rel="stylesheet" href="journeyDetails.css
     ">
-    <script src="journeyDetail.js"></script>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Journey Details</title>
 </head>
-<body>
+<body onload="toSetDate()">
 
 <div class="button1">
 <form = action="" onsubmit="date()" method="GET">
@@ -18,8 +18,9 @@
 <div class="labelform1">
 <label id="namelabel">Enter Your Name</label><input type="text" id="name" placeholder="Enter your name here"required>
 <label><h3 id="datelabel">Journey details</h3></label>          
-<input type="date" name="journeyDate"  id="jdate" required >
-<button>check date</button><br>
+<input type="date" value="" name="journeyDate" min="" max="" id="jdate" required >
+
+<!-- <button>check date</button><br> -->
 <label type="text" id="invalidDate"></label><br>
 
 
@@ -31,11 +32,11 @@
 <div class="button2">
 <form action="" onsubmit="return time()">
     <center>
-    <label id="timeLabel">Journey Time</label><br>
+    <h3 id="timeLabel">Journey Time</h3><br>
         <label type="text" id="invalidTime"></label><br>
         <label id="peakprice"></label><br>
         <input type="time" name="journeyTime" id="jtime" required>
-        <button>check Time</button><br>
+        <!-- <button>check Time</button><br> -->
         <center>
         
         
@@ -47,10 +48,10 @@
 <div class="button3">
 <form action="" onsubmit="genderCheck()">
     <center class="genderAll">
-    <h3><label for="gender">Gender</label></h3>
+    <h3 for="gender">Gender</h3>
     <input type="radio" value ="Male" name="gender" id="male" required><label1>Male<label1>&nbsp;
     <input type="radio" value="Female" name="gender" id="female" required>Female
-    <button>Submit</button>
+    <!-- <button>Submit</button> ctrl+/ to comment-->
     </center>
 </form>
 </div>
@@ -58,8 +59,8 @@
 <form action="" onsubmit="age()">
     <center>
         <label for="seniorcheck" id ="senior"><h3 id="dob">Enter your DOB for Seniority Discount</h3></label>
-        <input type="date" id="checksenior" required>&nbsp;
-        <button>Check</button><br><br>
+        <input type="date" id="checksenior" max="" required>&nbsp;<br>
+        <!-- <button>Check</button><br><br> -->
         <label for="invaliddate" id="noDate"></label><br><br>
         <label id="result"></label><br><br>
     </center>
@@ -68,9 +69,16 @@
 <div class="button4">
 <form action="" onsubmit="fillCheck()">
     <center>
-        <button>Next Page</button>
+        <button>Submit</button>
     </center>
+
 </form>
+<form action="summary.html" onsubmit="exitToNext()">
+        <center>
+            <button id="nextpage" >Next page</button>
+        </center>
+</form>
+<script src="journeyDetail.js"></script>
 </div>
 </body>
 </html>

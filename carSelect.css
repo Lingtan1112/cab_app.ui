@@ -22,6 +22,10 @@ body{
 	
 }
 
+#nextpage{
+	visibility: hidden;
+}
+
 .km input{
 	border: none;
 	border-radius: 20px;
@@ -127,3 +131,6 @@ body{
 	margin-top:20px;
 }
 
+#calculate.disabled{
+	pointer-events: none;
+}
